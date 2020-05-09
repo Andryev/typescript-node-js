@@ -8,6 +8,7 @@
     "build": "tsc",
     "builded": "NODE_ENV=development node ./dist/server.js",
     "unit-test": "NODE_ENV=test mocha --opts dist/tests/unit/config/mocha.opts  ./dist/tests/unit/unit.test.js",
+    "integration-test": "NODE_ENV=test mocha --opts dist/tests/integration/config/mocha.opts  ./dist/tests/integration/integration.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
