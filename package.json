@@ -5,7 +5,9 @@
   "main": "./server/server.ts",
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/ts-node ./server/server.ts",
+    "build": "tsc",
     "builded": "NODE_ENV=development node ./dist/server.js",
+    "unit-test": "NODE_ENV=test mocha --opts dist/tests/unit/config/mocha.opts  ./dist/tests/unit/unit.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +17,7 @@
   "author": "Andryev",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^13.13.5",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",
@@ -24,10 +27,17 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
+    "@types/chai": "^4.2.11",
     "@types/express": "^4.17.6",
+    "@types/mocha": "^7.0.2",
     "@types/morgan": "^1.9.0",
     "@types/sequelize": "^4.28.8",
+    "@types/supertest": "^2.0.9",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
     "sequelize": "^5.21.7",
+    "supertest": "^4.0.2",
+    "testdouble": "^3.13.1",
     "ts-node": "^8.9.1",
     "typescript": "^3.8.3"
   }
